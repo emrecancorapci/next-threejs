@@ -1,4 +1,4 @@
-import { type MeshProperties } from '@/app/types/MeshProperties';
+import { type MeshProperties } from '@/types/MeshProperties';
 
 export default function Floor(properties: MeshProperties) {
   return (

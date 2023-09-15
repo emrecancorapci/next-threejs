@@ -4,7 +4,7 @@ import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import type { Mesh } from 'three';
 
-import type { MeshProperties } from '@/app/types/MeshProperties';
+import type { MeshProperties } from '@/types/MeshProperties';
 
 export default function Box(properties: MeshProperties) {
   const reference = useRef<Mesh>();
