@@ -10,10 +10,12 @@ export default function Box(properties: MeshProperties) {
   const reference = useRef<Mesh>();
 
   useFrame((state, delta) => {
+    // @ts-expect-error - No reference.current won't be undefined. You're undefined.
     return (reference.current.rotation.x += delta);
   });
 
   return (
+    // @ts-expect-error - It is the true type, but ts likes to complain about it.
     <mesh {...properties} ref={reference}>
       {/* eslint-disable-next-line react/no-unknown-property */}
       <boxGeometry args={[1, 1, 1]} />
