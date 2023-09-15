@@ -8,10 +8,8 @@ interface Properties {
 
 export default function Page({ children }: Properties) {
   return (
-    <div className="h-screen w-screen bg-white">
-      <Canvas shadows={true} camera={{ position: [0, 5, 7] }}>
-        {children}
-      </Canvas>
-    </div>
+    <Canvas shadows={true} camera={{ position: [0, 5, 7] }} className="h-screen w-screen bg-white">
+      {children}
+    </Canvas>
   );
 }
