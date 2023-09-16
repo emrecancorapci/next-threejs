@@ -95,6 +95,7 @@
     "promise/valid-params": "warn",
     "promise/always-return": "off",
     "promise/no-native": "off",
+    "react/no-unknown-property": "off",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
