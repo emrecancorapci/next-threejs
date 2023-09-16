@@ -3,9 +3,8 @@
 /* eslint-disable react/no-unknown-property */
 import { OrbitControls } from '@react-three/drei';
 
-import Box from '@/components/box';
-
 import Floor from './_components/floor';
+import MovingBox from './_components/moving-box';
 
 export default function Basic() {
   return (
@@ -15,7 +14,7 @@ export default function Basic() {
       <pointLight castShadow position={[-5, 5, -5]} color="blue" intensity={50} />
 
       <Floor />
-      <Box size={[1, 1, 1]} position={[0, 1, 0]} roughness={0.5} metalness={0.3} color="red" />
+      <MovingBox size={[1, 1, 1]} position={[0, 1, 0]} roughness={0.5} metalness={0.3} color="red" />
 
       <OrbitControls />
     </>
