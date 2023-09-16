@@ -16,7 +16,7 @@ export default function Box(properties: MeshProperties) {
 
   return (
     // @ts-expect-error - It is the true type, but ts likes to complain about it.
-    <mesh {...properties} ref={reference}>
+    <mesh castShadow receiveShadow {...properties} ref={reference}>
       {/* eslint-disable-next-line react/no-unknown-property */}
       <boxGeometry args={[1, 1, 1]} />
       <meshPhysicalMaterial color="red" />
