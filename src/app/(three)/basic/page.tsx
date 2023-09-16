@@ -10,11 +10,11 @@ export default function Basic() {
   return (
     <>
       <ambientLight intensity={0.3} />
-      <spotLight position={[5, 5, 5]} angle={0.15} penumbra={1} intensity={50} />
-      <pointLight position={[-5, 5, -5]} color="blue" intensity={50} />
+      <spotLight castShadow position={[5, 5, 5]} angle={0.15} penumbra={1} intensity={50} />
+      <pointLight castShadow position={[-5, 5, -5]} color="blue" intensity={50} />
 
       <Floor />
-      <Box position={[0, 2, 0]} />
+      <Box position={[0, 1, 0]} />
 
       <OrbitControls />
     </>
