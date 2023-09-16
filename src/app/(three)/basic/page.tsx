@@ -3,7 +3,8 @@
 /* eslint-disable react/no-unknown-property */
 import { OrbitControls } from '@react-three/drei';
 
-import Box from './_components/box';
+import Box from '@/components/box';
+
 import Floor from './_components/floor';
 
 export default function Basic() {
