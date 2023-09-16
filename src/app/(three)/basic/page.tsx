@@ -15,7 +15,7 @@ export default function Basic() {
       <pointLight castShadow position={[-5, 5, -5]} color="blue" intensity={50} />
 
       <Floor />
-      <Box position={[0, 1, 0]} />
+      <Box size={[1, 1, 1]} position={[0, 1, 0]} roughness={0.5} metalness={0.3} color="red" />
 
       <OrbitControls />
     </>
