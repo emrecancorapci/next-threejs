@@ -10,8 +10,12 @@ export default function Box(properties: MeshProperties) {
   const reference = useRef<Mesh>();
 
   useFrame((state, delta) => {
+    const boxObject = reference.current;
     // @ts-expect-error - No reference.current won't be undefined. You're undefined.
-    return (reference.current.rotation.x += delta);
+    boxObject.rotation.x += delta;
+
+    // @ts-expect-error - No reference.current won't be undefined.
+    boxObject.position.x += Math.sin(state.clock.elapsedTime) * 0.01;
   });
 
   return (
