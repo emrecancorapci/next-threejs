@@ -1,7 +1,16 @@
-import type { Color, Euler, Vector3 } from 'three';
+import type { MeshProps } from '@react-three/fiber';
 
-export interface MeshProperties {
-  rotation?: Euler | [x, y, z];
-  position?: Vector3 | [x, y, z] | scalar;
+export interface MeshProperties extends MeshProps {
+  size?: [
+    width?: number | undefined,
+    height?: number | undefined,
+    depth?: number | undefined,
+    widthSegments?: number | undefined,
+    heightSegments?: number | undefined,
+    depthSegments?: number | undefined,
+  ];
+  roughness?: number;
+  metalness?: number;
   color?: Color | string;
+  reference?: MutableRefObject<Mesh>;
 }
