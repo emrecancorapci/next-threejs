@@ -12,5 +12,4 @@ export interface MeshProperties extends MeshProps {
   roughness?: number;
   metalness?: number;
   color?: Color | string;
-  reference?: MutableRefObject<Mesh>;
 }
