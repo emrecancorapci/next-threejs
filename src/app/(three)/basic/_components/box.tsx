@@ -19,7 +19,7 @@ export default function Box(properties: MeshProperties) {
     <mesh castShadow receiveShadow {...properties} ref={reference}>
       {/* eslint-disable-next-line react/no-unknown-property */}
       <boxGeometry args={[1, 1, 1]} />
-      <meshPhysicalMaterial color="red" />
+      <meshPhysicalMaterial roughness={0.5} metalness={0.3} color="red" />
     </mesh>
   );
 }

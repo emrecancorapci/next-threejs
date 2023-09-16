@@ -5,7 +5,7 @@ export default function Floor(properties: MeshProperties) {
     <mesh castShadow receiveShadow {...properties}>
       {/* eslint-disable-next-line react/no-unknown-property */}
       <boxGeometry args={[5, 0.1, 5]} />
-      <meshPhysicalMaterial color="green" />
+      <meshPhysicalMaterial roughness={0.2} metalness={0.5} color="green" />
     </mesh>
   );
 }
