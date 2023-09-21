@@ -15,7 +15,6 @@ export default function Model() {
           <primitive object={tree} position={[0, 0.25, 0]} />
           <ContactShadows scale={20} blur={10} far={20} frames={10} />
         </group>
-        <OrbitControls />
       </group>
 
       <OrbitControls
