@@ -10,6 +10,15 @@ import Box from '@/components/box';
 import Ground from './_component/ground';
 
 export default function Keyboard() {
+  const three = useThree();
+  const cam = three.camera as THREE.PerspectiveCamera;
+
+  useEffect(() => {
+    cam.position.set(0, 5, 5);
+    cam.fov = 45;
+    console.log('cam', cam);
+  }, [cam]);
+
   return (
     <>
       <hemisphereLight color="white" groundColor="blue" intensity={0.75} />
