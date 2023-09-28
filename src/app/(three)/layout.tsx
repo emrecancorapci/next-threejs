@@ -1,7 +1,9 @@
 'use client';
 
+import { ResizeObserver } from '@juggle/resize-observer';
 import { KeyboardControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import { ARButton } from '@react-three/xr';
 import { Leva } from 'leva';
 
 interface Properties {
@@ -19,7 +21,13 @@ export default function Page({ children }: Properties) {
         { name: 'jump', keys: ['Space'] },
       ]}
     >
-      <Canvas shadows={true} camera={{ position: [0, 5, 7] }} className="h-screen w-screen bg-zinc-700">
+      <ARButton />
+      <Canvas
+        shadows={true}
+        resize={{ polyfill: ResizeObserver }}
+        camera={{ position: [0, 5, 7] }}
+        className="h-screen w-screen bg-zinc-700"
+      >
         {children}
       </Canvas>
       <Leva collapsed={true} />
