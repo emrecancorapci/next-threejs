@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@juggle/resize-observer": "^3.4.0",
     "@react-three/drei": "^9.84.2",
     "@react-three/fiber": "^8.14.2",
     "@react-three/rapier": "^1.1.1",
+    "@react-three/xr": "^5.7.1",
     "leva": "^0.9.35",
     "next": "13.5.2",
     "react": "18.2.0",
