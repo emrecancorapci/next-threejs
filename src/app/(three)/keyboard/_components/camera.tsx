@@ -31,6 +31,7 @@ export default function Camera({
     const { forward, backward, left, right } = get();
     // @ts-expect-error - Ts doesn't like the fact that we extract booleans. But who cares? I won't take orders from a computer.
     const [horizontalScalar, verticalScalar] = [left - right, backward - forward];
+    // @ts-expect-error - boxPosition is not undefined.
     cameraNextPosition.set(boxPosition.x, boxPosition.y + 5, boxPosition.z + 5);
 
     camera.getWorldQuaternion(cameraRotationQuat);
@@ -39,6 +40,7 @@ export default function Camera({
     cameraRotationQuat.setFromEuler(cameraRotationEuler);
 
     camera.position.set(cameraNextPosition.x, cameraNextPosition.y, cameraNextPosition.z);
+    // @ts-expect-error - boxPosition is not undefined.
     camera.lookAt(boxPosition.x, boxPosition.y, boxPosition.z);
   });
 
