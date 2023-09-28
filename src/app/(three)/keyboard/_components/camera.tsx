@@ -25,7 +25,7 @@ export default function Camera({
     camera.fov = 45;
   }, [camera]);
 
-  useFrame(({ clock }) => {
+  useFrame(() => {
     const box = boxReference.current;
     const boxPosition = box?.translation();
     const { forward, backward, left, right } = get();
