@@ -5,9 +5,9 @@ import { Physics, type RapierRigidBody } from '@react-three/rapier';
 import { useRef } from 'react';
 import { Quaternion } from 'three';
 
-import Camera from './_component/camera';
-import Ground from './_component/ground';
-import Player from './_component/player';
+import Camera from './_components/camera';
+import Ground from './_components/ground';
+import Player from './_components/player';
 
 const cameraRotationQuat = new Quaternion();
 
